@@ -1,0 +1,44 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a:hover {
+  color: #e91e63;
+}
+
+/* Cart icon style */
+.cart-link i {
+  font-size: 1.2rem;
+  margin-left: 5px;
+}
+
+/* Responsive: Stack nav links on small screens */
+@media (max-width: 600px

@@ -1,0 +1,40 @@
+.footer {
+  background-color: #ffccdd;
+  color: #333;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+}
+
+.footer .social-icons {
+  margin-top: 0.5rem;
+}
+
+.footer .social-icons a {
+  margin: 0 10px;
+  color: #333;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  color: #e91e63;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  font-size: 24px;
+  padding: 12px;
+  border-radius: 50%;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.whatsapp-float:hover {
+  background-color: #1ebc59;
+}
