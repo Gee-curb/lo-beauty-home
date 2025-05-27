@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Shop from './pages/Shop';
@@ -9,7 +11,7 @@ import Admin from './pages/Admin';
 import Products from './pages/Products';
 import Contact from './pages/Contact';
 import Cart from './pages/Cart';
-import Footer from './components/Footer'; // Import Footer
+import Payment from './pages/Payment'; // Re-added Payment
 
 function App() {
   const [products, setProducts] = useState([
@@ -49,8 +51,12 @@ function App() {
           <Route path="/products" element={<Products products={products} />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/payment" element={<Payment />} /> {/* Re-added this route */}
+
+          {/* Test route */}
+          <Route path="/test" element={<div style={{ color: 'white', padding: '2rem' }}>Test route is working!</div>} />
         </Routes>
-        <Footer /> {/* Footer appears on all pages */}
+        <Footer />
       </Router>
     </div>
   );

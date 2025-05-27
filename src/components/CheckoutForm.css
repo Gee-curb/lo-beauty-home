@@ -1,0 +1,32 @@
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-element {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #f7f7f7;
+}
+
+.pay-button {
+  padding: 12px;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pay-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

@@ -1,0 +1,8 @@
+/* Stripe Element Styling */
+.StripeElement {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  background: white;
+}
