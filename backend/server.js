@@ -8,7 +8,6 @@ const app = express();
 
 // Initialize Stripe with secret key from .env
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
-
 // Middleware for CORS
 app.use(cors());
 
@@ -23,8 +22,8 @@ app.post('/webhook', bodyParser.raw({ type: 'application/json' }), (req, res) =>
   try {
     event = stripe.webhooks.constructEvent(req.body, sig, process.env.STRIPE_WEBHOOK_SECRET);
   } catch (err) {
-    console.error(Webhook Error: ${err.message});
-    return res.status(400).send(Webhook Error: ${err.message});
+    console.error(`Webhook Error: ${err.message}`);
+    return res.status(400).send(`Webhook Error: ${err.message}`);
   }
 
   console.log('Webhook received:', event.type);
@@ -38,8 +37,8 @@ app.post('/create-checkout-session', async (req, res) => {
       payment_method_types: ['card'],
       line_items: req.body.items,
       mode: 'payment',
-      success_url: ${process.env.FRONTEND_URL}/success,
-      cancel_url: ${process.env.FRONTEND_URL}/cancel,
+      success_url: `${process.env.FRONTEND_URL}/success`,
+      cancel_url: `${process.env.FRONTEND_URL}/cancel`,
     });
 
     res.json({ url: session.url });
@@ -57,5 +56,5 @@ app.get('/', (req, res) => {
 // Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(Server running on port ${PORT});
+  console.log(`Server running on port ${PORT}`);
 });
