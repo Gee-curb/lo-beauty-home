@@ -1,7 +1,10 @@
-# Dependencies
+# Root Dependencies
 /node_modules/
 /.pnp/
 /.pnp.js
+
+# Frontend Dependencies
+/frontend/node_modules/
 
 # Testing
 /coverage/
